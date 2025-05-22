@@ -16,7 +16,7 @@ CREATE TABLE #TempForm (
 	CreatedBy             VARCHAR(128),
 );
 
-BULK INSERT #TempForm FROM 'data\form.csv' WITH ( FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '0x0A' );
+BULK INSERT #TempForm FROM 'D:\Studies\Projects\Estate-Agency-DW\Data\form.csv' WITH ( FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '0x0A' );
 GO
 
 MERGE FactForm AS FF

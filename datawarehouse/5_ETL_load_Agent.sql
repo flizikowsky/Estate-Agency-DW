@@ -22,7 +22,7 @@ CREATE TABLE #TempAgent (
 );
 
 -- Bulk insert into the temp table data from csv file
-BULK INSERT #TempAgent FROM 'data\agents.csv' WITH ( FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '0x0A' );
+BULK INSERT #TempAgent FROM 'D:\Studies\Projects\Estate-Agency-DW\Data\agents.csv' WITH ( FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '0x0A' );
 GO
 
 WITH Source AS ( SELECT
