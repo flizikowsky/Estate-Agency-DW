@@ -23,8 +23,8 @@ CREATE TABLE DimDate (
     DateKey DATE PRIMARY KEY,
     [Day] TINYINT CHECK ([Day] BETWEEN 1 AND 31),
     [Year] SMALLINT CHECK ([Year] BETWEEN 1800 AND 2100),
-    [Month] VARCHAR(10) CHECK ([Month] IN ('January', 'February', 'March', 'April', 'May', 'June', 
-                                       'July', 'August', 'September', 'October', 'November', 'December')),
+    [Month] VARCHAR(12) CHECK ([Month] IN ('01 January', '02 February', '03 March', '04 April', '05 May', '06 June', 
+                                       '07 July', '08 August', '09 September', '10 October', '11 November', '12 December')),
     [DayOfWeek] VARCHAR(10) CHECK ([DayOfWeek] IN ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'))
 );
 

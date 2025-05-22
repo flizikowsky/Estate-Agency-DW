@@ -13,7 +13,7 @@ BEGIN
             @CurrentDate AS DateKey,
             DATEPART(DAY, @CurrentDate) AS [Day],
             DATEPART(YEAR, @CurrentDate) AS [Year],
-            DATENAME(MONTH, @CurrentDate) AS [Month],
+            CONCAT(CONCAT(CASE WHEN DATEPART(MONTH, @CurrentDate) < 10 THEN CONCAT('0',DATEPART(MONTH, @CurrentDate)) ELSE DATEPART(MONTH, @CurrentDate) END, ' '), DATENAME(MONTH, @CurrentDate)) AS [Month],
             DATENAME(WEEKDAY, @CurrentDate) AS [DayOfWeek]
     ) AS source
     ON target.DateKey = source.DateKey
