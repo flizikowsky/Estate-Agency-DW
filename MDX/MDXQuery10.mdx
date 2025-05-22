@@ -1,0 +1,23 @@
+WITH 
+
+MEMBER [Measures].[New User Sale Requests] AS 
+    ([Measures].[Fact Assigned Agent Count], [Dim Junk].[User Category].&[New])
+
+MEMBER [Measures].[All User Sale Requests] AS 
+    [Measures].[Fact Assigned Agent Count]
+
+MEMBER [Measures].[New User Proportion] AS 
+    IIF([Measures].[All User Sale Requests] = 0, NULL, 
+        [Measures].[New User Sale Requests] / [Measures].[All User Sale Requests]),
+		FORMAT_STRING = "Percent"
+
+SELECT 
+	{
+        [Measures].[New User Sale Requests],
+        [Measures].[All User Sale Requests],
+        [Measures].[New User Proportion]
+    } ON COLUMNS, 
+    [Dim Agent].[Name Surname].MEMBERS ON ROWS
+FROM [Estate Agency]
+
+--WHERE ([FK Date].[Month].&[May]) 

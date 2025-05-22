@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\smew\\source\\repos\\DW_EstateAgency\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A0C1A056-E996-C263-A0E6-BC87C8C62871}|DW_EstateAgency\\DW_EstateAgency.dwproj|C:\\Users\\smew\\source\\repos\\DW_EstateAgency\\DW_EstateAgency\\Estate Agency.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{A0C1A056-E996-C263-A0E6-BC87C8C62871}|DW_EstateAgency\\DW_EstateAgency.dwproj|solutionrelative:DW_EstateAgency\\Estate Agency.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68704569-3C17-D483-1E47-3DA7F11405DE}|ETL_Load\\ETL_Load.dtproj|C:\\Users\\smew\\source\\repos\\DW_EstateAgency\\ETL_Load\\Package.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{68704569-3C17-D483-1E47-3DA7F11405DE}|ETL_Load\\ETL_Load.dtproj|solutionrelative:ETL_Load\\Package.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a83394e3-39c2-4678-a3c8-364b69d78fd3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Estate Agency.cube [Design]",
+              "DocumentMoniker": "C:\\Users\\smew\\source\\repos\\DW_EstateAgency\\DW_EstateAgency\\Estate Agency.cube",
+              "RelativeDocumentMoniker": "DW_EstateAgency\\Estate Agency.cube",
+              "ToolTip": "C:\\Users\\smew\\source\\repos\\DW_EstateAgency\\DW_EstateAgency\\Estate Agency.cube [Design]",
+              "RelativeToolTip": "DW_EstateAgency\\Estate Agency.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-18T22:16:03.233Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Package.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\smew\\source\\repos\\DW_EstateAgency\\ETL_Load\\Package.dtsx",
+              "RelativeDocumentMoniker": "ETL_Load\\Package.dtsx",
+              "ToolTip": "C:\\Users\\smew\\source\\repos\\DW_EstateAgency\\ETL_Load\\Package.dtsx [Design]",
+              "RelativeToolTip": "ETL_Load\\Package.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-05-15T19:30:28.995Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

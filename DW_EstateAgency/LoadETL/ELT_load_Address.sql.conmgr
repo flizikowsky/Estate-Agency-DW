@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ELT_load_Address.sql"
+  DTS:DTSID="{F31FF459-F748-4B6F-B198-84430284DC8C}"
+  DTS:CreationName="FILE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="C:\Users\smew\Downloads\ELT_load_Address.sql" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

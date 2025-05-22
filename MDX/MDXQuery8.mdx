@@ -1,0 +1,11 @@
+SELECT 
+    [Measures].[Fact Assigned Agent Count] ON COLUMNS,
+     NON EMPTY CrossJoin (
+        [Dim Agent].[Availability Status].MEMBERS,
+        [Dim Junk].[Created Online].MEMBERS
+    ) ON ROWS
+FROM [Estate Agency]
+
+WHERE (
+    [FK Date].[Month].&[May]
+)

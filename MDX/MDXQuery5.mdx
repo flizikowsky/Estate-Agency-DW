@@ -1,0 +1,6 @@
+SELECT
+[Measures].[Fact Assigned Agent Count] ON COLUMNS,	
+	ORDER(
+	[Dim Agent].[Commission Fee].members,
+	[Measures].[Fact Assigned Agent Count]) ON ROWS
+FROM [Estate Agency]

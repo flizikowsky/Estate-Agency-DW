@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.EstateAgency"
+  DTS:DTSID="{7F1A69F9-C642-4F94-A994-CE2B02D6014A}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=EstateAgency;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-LoadETL-{7F1A69F9-C642-4F94-A994-CE2B02D6014A}localhost.EstateAgency;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

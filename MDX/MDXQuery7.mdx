@@ -1,0 +1,10 @@
+SELECT
+	[Measures].[Fact Assigned Agent Count] ON COLUMNS,
+	NON EMPTY [Dim Agent].[Name Surname].MEMBERS ON ROWS
+FROM [Estate Agency]
+
+WHERE ( 
+--[FK Date].[Month].&[May],
+[Dim Junk].[Was Agent Assigned].&[False]
+)
+

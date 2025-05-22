@@ -1,0 +1,38 @@
+WITH
+-- Total requests by year
+MEMBER [Measures].[TotalRequests] AS
+    ([Measures].[Fact Form Count])
+
+-- Successful requests
+MEMBER [Measures].[SuccessfulRequests] AS
+    ([Measures].[Fact Form Count], [Dim Form Questions].[Final Status].&[Successful])
+
+-- Terminated requests
+MEMBER [Measures].[TerminatedRequests] AS
+    ([Measures].[Fact Form Count], [Dim Form Questions].[Final Status].&[Terminated])
+
+-- Percentage successful by year
+MEMBER [Measures].[PercentSuccessful] AS
+    IIF([Measures].[TotalRequests] = 0, NULL,
+        ([Measures].[SuccessfulRequests] / [Measures].[TotalRequests])),
+    FORMAT_STRING = "Percent"
+
+-- Percentage terminated by year
+MEMBER [Measures].[PercentTerminated] AS
+    IIF([Measures].[TotalRequests] = 0, NULL,
+        ([Measures].[TerminatedRequests] / [Measures].[TotalRequests])),
+    FORMAT_STRING = "Percent"
+
+SELECT
+{
+    [Measures].[TotalRequests],
+    [Measures].[SuccessfulRequests],
+    [Measures].[TerminatedRequests],
+    [Measures].[PercentSuccessful],
+    [Measures].[PercentTerminated]
+} ON COLUMNS,
+
+NON EMPTY 
+[Req Date].[Year].Members ON ROWS
+
+FROM [Estate Agency]

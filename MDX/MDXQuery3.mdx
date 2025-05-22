@@ -1,0 +1,4 @@
+SELECT 
+	[Measures].[Fact Sell Request Count] ON COLUMNS,
+	Non empty [Dim Junk].[User Category].members ON ROWS
+FROM [Estate Agency]

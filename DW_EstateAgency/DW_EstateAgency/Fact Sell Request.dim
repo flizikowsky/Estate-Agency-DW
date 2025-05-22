@@ -1,0 +1,181 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="7617c3a4-e472-4721-9dc9-dc32dad374ed" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Sell Request</ID>
+  <Name>Fact Sell Request</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="7664a82b-121a-4293-ba58-1aacb34ef49a">
+    <DataSourceViewID>Estate Agency</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="19ad7feb-b1ca-4640-a3eb-d870fd12d371">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="fa51c417-8726-4be1-828e-ae568d14d66e">
+      <ID>Request Key</ID>
+      <Name>Request Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7cf8ea9c-8904-43cb-9cd8-36fd16a92fdd">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="08532419-f15a-4f83-a48e-3a9d11dbb1e6">
+            <TableID>dbo_FactSellRequest</TableID>
+            <ColumnID>RequestKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="48773645-6390-433b-998c-f0243bfd1f1e">
+          <AttributeID>FK Estate Key</AttributeID>
+          <Name>FK Estate Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="13c6139e-ff60-4ff9-a38c-1e1d760bc023">
+          <AttributeID>FK Date Key</AttributeID>
+          <Name>FK Date Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="eb0f94b0-1007-4e0d-907e-ca4706685d8b">
+          <AttributeID>FK Time Key</AttributeID>
+          <Name>FK Time Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e6db2f0a-5fa5-40f4-8343-5b12761514ee">
+          <AttributeID>FK User</AttributeID>
+          <Name>FK User</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d0e8ca75-b30c-4740-bbba-426e2802359b">
+          <AttributeID>FK Junk</AttributeID>
+          <Name>FK Junk</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="975794bd-fc5b-4869-8591-fb0679e63200">
+      <ID>FK Estate Key</ID>
+      <Name>FK Estate Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e0ab89a1-a83b-4a1a-884f-a5000f8bce4d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3227269e-627e-4905-a14b-a6577d7472d8">
+            <TableID>dbo_FactSellRequest</TableID>
+            <ColumnID>FK_EstateKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d3185493-cd6a-4d77-880b-6fdf2a0a6945">
+      <ID>FK Date Key</ID>
+      <Name>FK Date Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="69325cb7-a9b5-4723-85b8-99a76ca39e80">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d961d167-6f22-442f-85f1-e4267c4595dc">
+            <TableID>dbo_FactSellRequest</TableID>
+            <ColumnID>FK_DateKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6d1f2da7-cfe7-45a3-b215-0a5fadcd80e5">
+      <ID>FK Time Key</ID>
+      <Name>FK Time Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fa134c12-4a11-42bd-a0bc-13f7cec21ea0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2c92a684-9093-4943-9711-2f1d3500d77f">
+            <TableID>dbo_FactSellRequest</TableID>
+            <ColumnID>FK_TimeKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="52e198c8-88d2-47ae-8634-44ab5d42793a">
+      <ID>FK User</ID>
+      <Name>FK User</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1937c646-ec48-48d3-93fa-812711a98b6a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="153c9236-5925-482a-af6c-1833dc03e1f0">
+            <TableID>dbo_FactSellRequest</TableID>
+            <ColumnID>FK_User</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="87fc6a16-c68a-423c-9ca9-7fbe622d6781">
+      <ID>FK Junk</ID>
+      <Name>FK Junk</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="193979d4-8f0f-4579-a4cc-9305a0632050">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9598f888-b1e0-440a-9bf8-20819c64ea09">
+            <TableID>dbo_FactSellRequest</TableID>
+            <ColumnID>FK_Junk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

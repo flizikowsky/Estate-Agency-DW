@@ -1,5 +1,6 @@
 # Ignore IDE files
 .idea
+*.ds
 
 # Ignore private .env files
 *.env

@@ -1,0 +1,8 @@
+SELECT
+    [Measures].[Fact Assigned Agent Count] ON COLUMNS,
+	ORDER(
+	[Dim Agent].[Years Of Experience].Members,
+	[Measures].[Fact Assigned Agent Count],
+	DESC
+	 )ON ROWS
+FROM [Estate Agency]

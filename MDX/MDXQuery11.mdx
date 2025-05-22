@@ -1,0 +1,25 @@
+With
+-- Total forms count 
+MEMBER [Measures].[TotalForms] AS
+    ([Measures].[Fact Form Count], [Dim Form Questions].[Final Status])
+
+-- Successful forms count
+MEMBER [Measures].[SuccessfulForms] AS
+    ([Measures].[Fact Form Count], [Dim Form Questions].[Final Status].&[Successful])
+
+-- Success percentage
+MEMBER [Measures].[SuccessPercentage] AS
+    IIF([Measures].[TotalForms] = 0, NULL,
+        ([Measures].[SuccessfulForms] * 1.0) / [Measures].[TotalForms]),
+    FORMAT_STRING = "Percent"
+
+SELECT 
+{
+    [Measures].[TotalForms],
+    [Measures].[SuccessfulForms],
+    [Measures].[SuccessPercentage]
+} ON COLUMNS,
+
+[Dim Form Questions].[Age Group].Members ON ROWS
+
+FROM [Estate Agency]

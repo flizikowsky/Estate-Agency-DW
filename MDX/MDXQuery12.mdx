@@ -1,0 +1,26 @@
+	WITH
+
+-- Total forms count 
+MEMBER [Measures].[TotalForms] AS
+    ([Measures].[Fact Form Count], [Dim Form Questions].[Final Status])
+
+-- Terminnated forms count
+MEMBER [Measures].[TerminatedForms] AS
+    ([Measures].[Fact Form Count], [Dim Form Questions].[Final Status].&[Terminated])
+
+-- Terminate percentage
+MEMBER [Measures].[TerminatePercentage] AS
+    IIF([Measures].[TotalForms] = 0, NULL,
+        ([Measures].[TerminatedForms] * 1.0) / [Measures].[TotalForms]),
+    FORMAT_STRING = "Percent"
+
+SELECT 
+{
+    [Measures].[TotalForms],
+    [Measures].[TerminatedForms],
+    [Measures].[TerminatePercentage]
+} ON COLUMNS
+
+FROM [Estate Agency]
+-- impossible to do or very hahahard 
+--WHERE ([Created By].[User Key].&[1]) -- meaning anonymous user

@@ -1,0 +1,11 @@
+SELECT
+
+[Measures].[Fact Sell Request Count] ON COLUMNS,
+
+    NON EMPTY Order(
+        [Dim Estate].[City District].Members,
+        [Measures].[Fact Sell Request Count],
+        ASC
+    ) ON ROWS
+
+FROM [Estate Agency]

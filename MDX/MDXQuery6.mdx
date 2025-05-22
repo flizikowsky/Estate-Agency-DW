@@ -1,0 +1,18 @@
+WITH
+SET [Top5Agents] AS
+    TOPCOUNT(
+        [Dim Agent].[Name Surname].Members,
+        4,
+        [Measures].[Fact Assigned Agent Count]
+    )
+
+
+SELECT
+	[Measures].[Fact Assigned Agent Count] ON COLUMNS,
+	[Top5Agents] ON ROWS
+FROM [Estate Agency]
+
+WHERE ( 
+[FK Date].[Month].&[May]
+)
+

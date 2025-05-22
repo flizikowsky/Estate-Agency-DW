@@ -1,0 +1,32 @@
+WITH 
+-- Current month member
+MEMBER [Measures].[CurrentMonthRequests] AS
+    ([Measures].[Fact Assigned Agent Count], [FK Date].[Month].CURRENTMEMBER)
+
+-- Previous month member
+MEMBER [Measures].[PreviousMonthRequests] AS
+    ([Measures].[Fact Assigned Agent Count], [FK Date].[Month].PREVMEMBER)
+
+-- Change between months
+MEMBER [Measures].[Change] AS
+    [Measures].[CurrentMonthRequests] - [Measures].[PreviousMonthRequests]
+
+-- Percent change
+MEMBER [Measures].[PercentChange] AS
+    IIF([Measures].[PreviousMonthRequests] = 0, NULL,
+        ([Measures].[Change] * 1.0) / [Measures].[PreviousMonthRequests]),
+    FORMAT_STRING = "Percent"
+
+SELECT 
+{
+    [Measures].[CurrentMonthRequests],
+    [Measures].[PreviousMonthRequests],
+    [Measures].[Change],
+    [Measures].[PercentChange]
+} ON COLUMNS,
+
+NON EMPTY {
+    [Dim Agent].[BK Licence Number].&[70163]
+} * [FK Date].[Month].Members ON ROWS
+
+FROM [Estate Agency] 
